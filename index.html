@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+
+    body {
+        background: #081b29;
+        color: #ededed;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 9%;
+        background: transparent;
+        font-weight: 100;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #home {
+        display: flex;
+        padding: 1%;
+
+    }
+
+    .ai-img {
+        position: relative;
+        top: 120px;
+        padding-right: 11%;
+        float: right;
+    }
+
+    .home-content {
+        max-width: 960px;
+
+    }
+
+    .home-content p {
+        position: relative;
+        top: 110px;
+        font-size: 17px;
+        margin: 0px 100px 0px;
+
+    }
+
+    .home-content h2 {
+        position: relative;
+        top: 130px;
+        width: 100%;
+        height: 100%;
+        margin: 0px 40px 30px;
+        text-decoration: underline;
+        font-size: 36px;
+
+    }
+
+    .logo {
+        position: relative;
+        border-radius: 50%;
+        border: 1px solid #0fc5c5;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .active {
+        color: #0fc5c5;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        color: #ededed;
+        font-weight: 500;
+        margin-left: 2rem;
+        transition: .8s;
+    }
+
+    .navbar a:hover {
+        color: #0fc5c5;
+    }
+
+    section {
+        min-height: 100vh;
+        padding: 10rem 2% 9rem;
+
+    }
+
+    #about {
+        display: flex;
+        background-color: #112e42;
+        min-width: 900vh;
+    }
+
+    .history-img {
+        position: relative;
+        width: 600px;
+        top: 655px;
+        margin-right: 200px;
+    }
+
+    .types-ai {
+        position: relative;
+        top: 500px;
+        float: right;
+        padding-right: 10%;
+    }
+
+    .about-content {
+        max-width: 990px;
+        max-height: 300px;
+    }
+
+    .about-content p {
+        position: relative;
+        top: 220px;
+        font-size: 15px;
+        font-weight: 100px;
+        margin: 0px 100px 0px;
+    }
+
+    #aiinbusiness {
+        background-color: #081b29;
+        display: flex;
+    }
+
+    .ai-in-business-content {
+        max-width: 960px;
+    }
+
+    .ai-in-business-content p {
+        position: relative;
+        width: 70%;
+        height: 100%;
+        top: 25px;
+        font-size: 18px;
+        font-weight: 100px;
+        margin-left: 67%;
+        padding-bottom: 120px;
+    }
+
+    .business-img {
+        position: relative;
+        top: 430px;
+        height: 400px;
+        width: 540px;
+    }
+
+    #application-of-ai {
+        background-color: #112e42;
+    }
+
+    .application-of-ai-content {
+        max-width: 360px;
+    }
+
+    .application-of-ai-content p {
+        position: relative;
+        height: 400px;
+        width: 700px;
+        top: 70px;
+        font-size: 16px;
+
+    }
+
+    .application-img {
+        width: 620px;
+        height: auto;
+        position: relative;
+        float: right;
+    }
+
+    .contact {
+        min-height: auto;
+        padding-bottom: 7rem;
+    }
+
+    .contact form {
+        max-width: 70rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact form .input-box {
+        position: relative;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact form .input-box .input-field {
+        position: relative;
+        width: 49%;
+        margin: .8rem 0;
+    }
+
+    .contact h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 35px;
+        font-size: 31px;
+    }
+
+    .contact form .input-box .input-field input {
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: #ededed;
+        background: transparent;
+        border-radius: 5px;
+        border: 2px solid #0fc5c5;
+    }
+
+    .contact form .textarea-field textarea {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: #ededed;
+        background: transparent;
+        border-radius: .6rem;
+        border: 2px solid #0fc5c5;
+    }
+
+    .contact form .input-box .input-field input::placeholder {
+        color: #ededed;
+    }
+
+    .contact form .textarea-field textarea::placeholder {
+        color: #ededed;
+    }
+
+    .contact form .textarea-field {
+        position: relative;
+        margin: .9rem 0 2.9rem;
+        display: flex;
+    }
+
+
+    span {
+        color: #0fc5c5;
+        justify-content: space-around;
+        text-decoration: underline;
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2rem 9%;
+        background: #112e42;
+    }
+
+    .footer-text p {
+        font-size: 1.4rem;
+    }
+
+    .bn3637 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem 2rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        backface-visibility: hidden;
+        border: 2px solid #0fc5c5;
+        border-radius: 3px;
+        height: 20%;
+        width: 20%;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="ai(1).png" alt="png" height="60px" width="60px"></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About AI</a>
+            <a href="#aiinbusiness">AI in Business</a>
+            <a href="#application-of-ai">Application of AI</a>
+            <a href="#contact">Contact</a>
+    </header>
+
+    <div class="ai-img">
+        <img src="ai(2).png" alt="" height="400px" width="300px">
+    </div>
+    <section id="home">
+        <div class="home-content">
+            <!-- Content for the Home section goes here -->
+            <center>
+                <h2>Introduction</h2>
+            </center>
+            <p>
+
+                Welcome to AIExplained, your gateway to the fascinating world of Artificial Intelligence (AI).
+                Explore the cutting-edge technologies, real-world applications, and the transformative impact AI has on
+                various industries. Join us on a journey to understand, appreciate, and engage with the power of
+                artificial intelligence.
+                <br> <br>
+                <strong> <span> Engaging Visuals: </span></strong>
+                <br>
+                Our home page features captivating visuals and animations that showcase the dynamic and evolving nature
+                of AI. From machine learning algorithms to futuristic applications, immerse yourself in the
+                possibilities AI brings to the table.
+                <br> <br>
+                <strong> <span> Navigation:</span> </strong>
+                <br>
+                Navigate effortlessly through our website and dive into different sections to discover the multifaceted
+                realm of AI. Whether you're a curious learner, industry professional, or technology enthusiast, there's
+                something here for everyone.
+            </p>
+
+        </div>
+    </section>
+    <div class="history-img">
+        <img src="ai(3).png" alt="" height="280px">
+    </div>
+    <div class="types-ai">
+        <img src="type.png" alt="" height="350px" width="320px">
+    </div>
+    <section id="about">
+        <div class="about-content">
+            <!-- Content for the About AI section goes here -->
+
+            <p>
+
+                <span><strong>Overview:</strong></span> Artificial Intelligence, or AI, is the simulation of human
+                intelligence in machines programmed to think,
+                learn,
+                and problem-solve. From automating routine tasks to complex decision-making processes, AI is reshaping
+                the way
+                we live and work.
+                <br> <br>
+                <strong> <span> Types of AI:</span> </strong>
+                Explore the different facets of AI, ranging from Narrow AI, designed for specific tasks, to the concept
+                of
+                General AI, which aims to replicate human intelligence across a wide range of activities. Discover how
+                these
+                types contribute to advancements in technology.
+                <br> <br>
+                <strong> <span> Historical Background: </span></strong>
+                Embark on a journey through the history of AI, from its theoretical beginnings to significant
+                breakthroughs.
+                Uncover key milestones that have shaped the landscape of artificial intelligence, setting the stage for
+                the
+                incredible innovations we witness today.
+            </p>
+        </div>
+    </section>
+
+    <div class="business-img">
+        <img src="ai-business.png" alt="" height="400px" width="500px">
+    </div>
+    <section id="aiinbusiness">
+        <!-- Content for the AI in Business section goes here -->
+        <div class="ai-in-business-content">
+            <p>
+                <strong><span>Automation and Decision-Making:</span></strong>
+                Discover how businesses leverage AI to streamline operations and enhance efficiency through automation.
+                From
+                repetitive tasks to data analysis, AI plays a pivotal role in improving decision-making processes,
+                ultimately
+                driving growth and innovation.
+                <br> <br>
+                <strong> <span> Social and Economic Impact:</span></strong>
+
+                Understanding the broader societal and economic implications of AI deployment is vital. Considering the
+                potential impact on employment, income inequality, and societal structures helps guide responsible AI
+                development. Striking a balance between technological innovation and societal well-being is a key
+                ethical consideration.
+                <br> <br>
+                <strong> <span>Fraud Detection and Cybersecurity:</span> </strong>
+                <br>
+                Protecting Against Threats:
+
+                AI enhances cybersecurity by identifying and mitigating potential threats through anomaly detection,
+                pattern recognition, and real-time monitoring. Businesses leverage AI to safeguard sensitive data and
+                protect against cyber threats.
+                <br> <br>
+                Ethical Implications:
+
+                Balancing security with user privacy and avoiding the misuse of AI for surveillance are essential
+                ethical considerations. Implementing responsible AI practices safeguards against unintended
+                consequences.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="application-of-ai">
+        <!-- Content for application areas of ai goes here -->
+        <div class="application-img">
+            <img src="application.png" alt="" height="400px">
+        </div>
+        <div class="application-of-ai-content">
+            <p>
+                <strong> <span>Education:</span> </strong>
+                <br>
+                Adaptive Learning Platforms:
+
+                AI adapts learning materials based on individual student progress, providing personalized learning
+                experiences and addressing diverse learning styles.
+                <br><br>
+                Automated Grading:
+
+                AI streamlines the grading process, allowing educators to focus on teaching while providing timely and
+                consistent feedback to students.
+                Language Translation:
+                <br><br>
+                AI-driven language translation tools facilitate global collaboration and cross-cultural learning
+                experiences.
+                <br><br>
+
+                <strong> <span>Entertainment:</span> </strong>
+                <br>
+                Content Recommendation:
+
+                AI algorithms analyze user preferences and behaviors, recommending personalized content across streaming
+                platforms.
+                <br> <br>
+                Content Creation:
+                AI tools assist in content creation, generating music, art, and other forms of media through innovative
+                algorithms.
+                Virtual Reality (VR) and Augmented Reality (AR):
+
+                AI enhances immersive experiences in VR and AR applications, creating interactive and realistic virtual
+                worlds.
+            </p>
+        </div>
+
+
+    </section>
+
+    <!-- Contact Section Design-->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us</span> </h2>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" required>
+
+                </div>
+                <span class="animate scroll" style="--i:3;"></span>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+
+                </div>
+
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="60" rows="10" placeholder="Your Message" required></textarea>
+            </div>
+
+            <div class="btn">
+                <a href="/" class="bn3637 bn37">Submit</a>
+            </div>
+            </div>
+        </form>
+    </section>
+    <!--Footer design-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>©Copyright 2024 by SakshyamKharel,
+                AayushRajbanshi,RohanNepali,SimaTajpuriya,PabitraShrestha,NupamaPrasai,example,example||All rights
+                reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
